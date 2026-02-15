@@ -1,0 +1,96 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_tag
+#
+# Translators:
+# Michael Blickenstorfer <info@blicki.ch>, 2026
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-15 12:24+0000\n"
+"PO-Revision-Date: 2026-02-15 12:24+0000\n"
+"Last-Translator: Michael Blickenstorfer <info@blicki.ch>\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: account_tag
+#: model_terms:ir.ui.view,arch_db:account_tag.account_account_tag_view_form
+msgid ""
+"<span class=\"ml-2\" invisible=\"active == True\">\n"
+"                                    (<span style=\"color:red;\">Archived</span>)\n"
+"                                </span>"
+msgstr ""
+"<span class=\"ml-2\" invisible=\"active == True\">\n"
+"                                    (<span style=\"color:red;\">Archivé</span>)\n"
+"                                </span>"
+
+#. module: account_tag
+#: model_terms:ir.actions.act_window,help:account_tag.action_account_account_tag
+msgid ""
+"<strong>Account Tags are used to categorize and label accounts in your chart"
+" of accounts.</strong>"
+msgstr ""
+"<strong>Les étiquettes de compte sont utilisées pour catégoriser et étiqueter les comptes de votre plan comptable.</strong>"
+
+#. module: account_tag
+#: model:ir.model,name:account_tag.model_account_account_tag
+#: model_terms:ir.ui.view,arch_db:account_tag.account_account_tag_view_form
+msgid "Account Tag"
+msgstr "Étiquette de compte"
+
+#. module: account_tag
+#: model_terms:ir.ui.view,arch_db:account_tag.account_account_tag_view_form
+msgid "Account Tag Definition"
+msgstr "Définition de l'étiquette de compte"
+
+#. module: account_tag
+#: model:ir.actions.act_window,name:account_tag.action_account_account_tag
+#: model:ir.ui.menu,name:account_tag.account_account_tag_menu
+#: model_terms:ir.ui.view,arch_db:account_tag.account_account_tag_view_list
+msgid "Account Tags"
+msgstr "Étiquettes de compte"
+
+#. module: account_tag
+#: model:ir.model.fields,field_description:account_tag.field_account_account_tag__child_ids
+#: model_terms:ir.ui.view,arch_db:account_tag.account_account_tag_view_form
+msgid "Child Tags"
+msgstr "Sous-étiquettes"
+
+#. module: account_tag
+#: model:ir.model.fields,field_description:account_tag.field_account_account_tag__code
+msgid "Code"
+msgstr "Code"
+
+#. module: account_tag
+#: model:ir.model.fields,field_description:account_tag.field_account_account_tag__company_ids
+msgid "Companies"
+msgstr "Sociétés"
+
+#. module: account_tag
+#: model:ir.model.fields,field_description:account_tag.field_account_account_tag__parent_id
+msgid "Parent Tag"
+msgstr "Étiquette parente"
+
+#. module: account_tag
+#: model_terms:ir.ui.view,arch_db:account_tag.account_account_tag_view_form
+msgid "Status"
+msgstr "Statut"
+
+#. module: account_tag
+#: model_terms:ir.ui.view,arch_db:account_tag.account_account_tag_view_form
+msgid "Tag Name"
+msgstr "Nom de l'étiquette"
+
+#. module: account_tag
+#: model_terms:ir.actions.act_window,help:account_tag.action_account_account_tag
+msgid ""
+"They can be used for various purposes, such as reporting, filtering, and "
+"organizing accounts based on specific criteria."
+msgstr ""
+"Ils peuvent être utilisés à diverses fins, comme la génération de rapports, le filtrage et l'organisation des comptes selon des critères spécifiques."
