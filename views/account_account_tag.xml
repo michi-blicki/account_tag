@@ -76,10 +76,10 @@
                 <filter name="active" string="Active" domain="[('active','=',True)]"/>
                 <filter name="inactive" string="Archived" domain="[('active','=',False)]"/>
                 <group expand="0" string="Group By">
-                    <filter string="Parent" name="parent_id" context="{'group_by': parent_id}" />
-                    <filter string="Company" name="company_ids" context="{'group_by': company_ids}" />
-                    <filter string="Applicability" name="applicability" context="{'group_by': applicability}" />
-                    <filter string="Status" name="active" context="{'group_by': active}" />
+                    <filter string="Parent" name="parent_id" context="{'group_by': 'parent_id'}" />
+                    <filter string="Company" name="company_ids" context="{'group_by': 'company_ids'}" />
+                    <filter string="Applicability" name="applicability" context="{'group_by': 'applicability'}" />
+                    <filter string="Status" name="active" context="{'group_by': 'active'}" />
                 </group>
             </search>
         </field>
