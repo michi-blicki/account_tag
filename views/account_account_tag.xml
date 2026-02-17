@@ -53,7 +53,7 @@
             <field name="name">account.account.tag.view.list</field>
             <field name="model">account.account.tag</field>
             <field name="arch" type="xml">
-                <list string="Account Tags">
+                <list string="Account Tags" default_order="code asc">
                     <field name="code" />
                     <field name="name" />
                     <field name="parent_id" />
@@ -62,6 +62,28 @@
                     <field name="country_id" />
                     <field name="company_ids" widget="many2many_tags" options="{'no_create': True, 'no_open': True}"/>
                 </list>
+            </field>
+        </record>
+
+        <record id="account_account_tag_view_search" model="ir.ui.view">
+            <field name="name">account.account.tag.view.search</field>
+            <field name="model">account.account.tag</field>
+            <field name="arch" type="xml">
+                <search string="Search Account Tags">
+                    <field name="applicability" />
+                    <field name="code" />
+                    <field name="name" />
+                    <field name="company_ids" />
+                    <field name="parent_id" />
+                    <filter name="active" string="Active" domain="[('active','=',True)]"/>
+                    <filter name="inactive" string="Archived" domain="[('active','=',False)]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Parent" name="parent_id" context="{'group_by': parent_id}" />
+                        <filter string="Company" name="company_ids" context="{'group_by': company_ids}" />
+                        <filter string="Applicability" name="applicability" context="{'group_by': applicability}" />
+                        <filter string="Status" name="active" context="{'group_by': active}" />
+                    </group>
+                </search>
             </field>
         </record>
 
@@ -76,6 +98,7 @@
                 (0, 0, {'view_mode': 'list', 'view_id': ref('account_account_tag_view_list')}),
                 (0, 0, {'view_mode': 'form', 'view_id': ref('account_account_tag_view_form')}),
             ]"/>
+            <field name="search_view_id" ref="account_account_tag_view_search"/>
             <field name="help" type="html">
                 <p>
                     <strong>Account Tags are used to categorize and label accounts in your chart of accounts.</strong>

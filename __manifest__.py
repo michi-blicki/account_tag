@@ -20,7 +20,7 @@ The module adds configuration views for managing these tags to Invoicing / Confi
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Association',
-    'version': '18.0.1.1.0',
+    'version': '18.0.1.2.0',
     'application': False,
     'auto_install': False,
     'installable': True,
