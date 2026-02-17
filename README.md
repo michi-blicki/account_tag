@@ -84,7 +84,8 @@ git clone https://github.com/yourusername/account_tag.git /path/to/odoo/addons/
 
 ## Configuration
 
-No additional configuration is required beyond module installation. All settings are managed through the standard Odoo interface.
+No additional configuration is required beyond module installation. All settings are managed
+through the standard Odoo interface.
 
 ## API Usage
 

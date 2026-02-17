@@ -28,7 +28,9 @@
                     <group>
                         <field name="applicability" />
                         <field name="color" widget="color_picker"/>
-                        <field name="company_ids" widget="many2many_tags" options="{'no_create': True, 'no_open': True}"/>
+                        <field name="company_ids" 
+                            widget="many2many_tags" 
+                            options="{'no_create': True, 'no_open': True}"/>
                         <field name="country_id" />
                     </group>
                     <separator string="Child Tags" />
@@ -38,7 +40,9 @@
                                 <field name="code" />
                                 <field name="name" />
                                 <field name="country_id" />
-                                <field name="company_ids" widget="many2many_tags" options="{'no_create': True, 'no_open': True}"/>
+                                <field name="company_ids" 
+                                    widget="many2many_tags" 
+                                    options="{'no_create': True, 'no_open': True}"/>
                             </list>
                         </field>
                     </group>
@@ -58,7 +62,9 @@
                 <field name="applicability" />
                 <field name="color" widget="color_picker"/>
                 <field name="country_id" />
-                <field name="company_ids" widget="many2many_tags" options="{'no_create': True, 'no_open': True}"/>
+                <field name="company_ids" 
+                    widget="many2many_tags" 
+                    options="{'no_create': True, 'no_open': True}"/>
             </list>
         </field>
     </record>
@@ -73,13 +79,27 @@
                 <field name="name" />
                 <field name="company_ids" />
                 <field name="parent_id" />
-                <filter name="active" string="Active" domain="[('active','=',True)]"/>
-                <filter name="inactive" string="Archived" domain="[('active','=',False)]"/>
+
+                <filter name="active" 
+                    string="Active" 
+                    domain="[('active','=',True)]"/>
+                <filter name="inactive" 
+                    string="Archived" 
+                    domain="[('active','=',False)]"/>
+
                 <group expand="0" string="Group By">
-                    <filter string="Parent" name="parent_id" context="{'group_by': 'parent_id'}" />
-                    <filter string="Company" name="company_ids" context="{'group_by': 'company_ids'}" />
-                    <filter string="Applicability" name="applicability" context="{'group_by': 'applicability'}" />
-                    <filter string="Status" name="active" context="{'group_by': 'active'}" />
+                    <filter string="Parent" 
+                        name="parent_id" 
+                        context="{'group_by': 'parent_id'}" />
+                    <filter string="Company" 
+                        name="company_ids" 
+                        context="{'group_by': 'company_ids'}" />
+                    <filter string="Applicability" 
+                        name="applicability" 
+                        context="{'group_by': 'applicability'}" />
+                    <filter string="Status" 
+                        name="active" 
+                        context="{'group_by': 'active'}" />
                 </group>
             </search>
         </field>
@@ -93,16 +113,26 @@
         <field name="context">{}</field>
         <field name="view_ids" eval="[
             (5,0),
-            (0, 0, {'view_mode': 'list', 'view_id': ref('account_account_tag_view_list')}),
-            (0, 0, {'view_mode': 'form', 'view_id': ref('account_account_tag_view_form')}),
+            (0, 0, {
+                'view_mode': 'list', 
+                'view_id': ref('account_account_tag_view_list')
+            }),
+            (0, 0, {
+                'view_mode': 'form', 
+                'view_id': ref('account_account_tag_view_form')
+            }),
         ]"/>
         <field name="search_view_id" ref="account_account_tag_view_search"/>
         <field name="help" type="html">
             <p>
-                <strong>Account Tags are used to categorize and label accounts in your chart of accounts.</strong>
+                <strong>
+                    Account Tags are used to categorize and label accounts
+                    in your chart of accounts.
+                </strong>
             </p>
             <p>
-                They can be used for various purposes, such as reporting, filtering, and organizing accounts based on specific criteria.
+                They can be used for various purposes, such as reporting, 
+                filtering, and organizing accounts based on specific criteria.
             </p>
         </field>
     </record>
